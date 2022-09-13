@@ -31,7 +31,6 @@ services:
             APP_SECRET: ${APP_SECRET}
         env_file:
             - .env
-            - .env.local
         depends_on:
             - mysql
 

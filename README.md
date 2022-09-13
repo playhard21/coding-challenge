@@ -1,2 +1,5 @@
-# coding-challenge
-Backend coding challenge for job position
+## Importing log file to project
+## Init the project
+## Databases
+### Test database
+

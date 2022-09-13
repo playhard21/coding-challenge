@@ -18,11 +18,11 @@ stop:
 
 .PHONY: enter
 enter:
-	@docker-compose exec --user="php" devbox-service /bin/sh
+	@docker-compose exec --user="php" devbox-service //bin//sh
 
 .PHONY: enter-as-root
 enter-as-root:
-	@docker-compose exec --user="root" devbox-service /bin/sh
+	@docker-compose exec --user="root" devbox-service //bin//sh
 
 .PHONY: test
 test:
