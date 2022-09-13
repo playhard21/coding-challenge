@@ -18,11 +18,11 @@ class Logs
 
     #[ORM\OneToOne(inversedBy: 'logs_id', cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
-    private ?LogDates $date_id = null;
+    private ?LogDates $date = null;
 
     #[ORM\OneToOne(inversedBy: 'logs_id', cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
-    private ?LogRequest $request_id = null;
+    private ?LogRequest $request = null;
 
     #[ORM\Column]
     private ?int $status_code = null;
@@ -46,24 +46,24 @@ class Logs
 
     public function getDateId(): ?LogDates
     {
-        return $this->date_id;
+        return $this->date;
     }
 
-    public function setDateId(LogDates $date_id): self
+    public function setDateId(LogDates $date): self
     {
-        $this->date_id = $date_id;
+        $this->date = $date;
 
         return $this;
     }
 
     public function getRequestId(): ?LogRequest
     {
-        return $this->request_id;
+        return $this->request;
     }
 
-    public function setRequestId(LogRequest $request_id): self
+    public function setRequestId(LogRequest $request): self
     {
-        $this->request_id = $request_id;
+        $this->request = $request;
 
         return $this;
     }

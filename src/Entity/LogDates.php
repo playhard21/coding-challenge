@@ -18,7 +18,7 @@ class LogDates
     private ?\DateTimeInterface $date = null;
 
     #[ORM\Column]
-    private ?int $offset = null;
+    private ?string $offset = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $date_utc = null;
@@ -48,7 +48,7 @@ class LogDates
         return $this->offset;
     }
 
-    public function setOffset(int $offset): self
+    public function setOffset(string $offset): self
     {
         $this->offset = $offset;
 
